@@ -1,7 +1,8 @@
-package missingg
+package missingg_test
 
 import (
 	"fmt"
+	. "github.com/davidhinkes/missingg"
 )
 
 func ExampleSet() {
@@ -12,7 +13,7 @@ func ExampleSet() {
 	s.Insert(3)
 	s.Insert(7)
 	sl := s.AsSlice()
-	Sort(sl, func(a, b int) bool { return a < b })
+	Sort(sl, func(a, b interface{}) bool { return a.(int) < b.(int) })
 	fmt.Println(sl)
 	// Output: [1 2 3 7]
 }
