@@ -1,8 +1,7 @@
-package missingg_test
+package missingg
 
 import (
 	"fmt"
-	. "github.com/davidhinkes/missingg"
 )
 
 func ExampleSort() {
